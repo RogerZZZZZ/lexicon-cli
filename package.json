@@ -26,5 +26,10 @@
     "eslint-plugin-import": "^1.16.0",
     "webpack": "^4.24.0",
     "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "figlet": "^1.2.1"
   }
 }
