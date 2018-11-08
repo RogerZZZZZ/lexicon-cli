@@ -18,8 +18,24 @@ c.queue([{
       console.log(error)
     } else {
       const $ = res.$
-      const result = $('.base-speak')
-      console.log(result)
+      const phoneticSymbol = $('.base-speak span').each(function() {
+        const val = $(this).find('span').text()
+        console.log(val)
+      })
+
+      const translation = $('.base-list.switch_part li').each(function() {
+        let content = ''
+        $(this).find('span').each(function() {
+          content += $(this).text()
+        })
+        console.log(content)
+      })
+
+      const arr = []
+      const change = $('.change.clearfix span').each(function() {
+        arr.push($(this).text() + $(this).find('a').text())
+      })
+      console.log(arr)
     }
     done()
   }
