@@ -30,6 +30,8 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
-    "figlet": "^1.2.1"
+    "crawler": "^1.2.0",
+    "figlet": "^1.2.1",
+    "koa": "^2.6.1"
   }
 }
