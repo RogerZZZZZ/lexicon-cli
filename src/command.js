@@ -1,6 +1,7 @@
 const program = require('commander')
 
 const { query } = require('./query')
+const { search } = require('../back/crawler')
 
 program
   .version('0.0.1')
@@ -11,7 +12,7 @@ program
   .alias('q')
   .description('Begin to query')
   .action((word) => {
-    query(word)
+    search(word)
   })
 
 program.parse(process.argv)
