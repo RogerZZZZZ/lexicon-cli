@@ -13,3 +13,12 @@
   - [ ] global install
   - [ ] simplify the command instead of using node commands.
 - [ ] language detect
+
+
+### command
+
+```shell
+cd src/
+
+node command.js q pig
+```
