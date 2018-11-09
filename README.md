@@ -13,6 +13,9 @@
   - [ ] global install
   - [ ] simplify the command instead of using node commands.
 - [ ] language detect
+- [ ] error handlering
+- [ ] theme support
+- [ ] add loading animation
 
 
 ### command

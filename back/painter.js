@@ -21,7 +21,7 @@ const paintChange = (change) => {
 const warning = (word) => log(chalk.keyword(word))
 
 const painting = (word, opt) => {
-  paintWord(word.word)
+  // paintWord(word.word)
   word.symbol.map(el => paintSymbol(el))
   word.translation.map(el => paintTranslation(el))
   word.changes.map(el => paintChange(el))
