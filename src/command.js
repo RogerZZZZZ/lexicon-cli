@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
 const program = require('commander')
+const { search } = require('../back/core')
 
-const { query } = require('./query')
-const { search } = require('../back/crawler')
+const opt = {
+  fuzzy: false,
+}
 
 program
   .version('0.0.1')
@@ -13,8 +15,10 @@ program
   .command('query <word>')
   .alias('q')
   .description('Begin to query')
-  .action((word) => {
-    search(word)
+  .option('-f, --fuzzy', 'With fuzzy matching')
+  .action((word, cmd) => {
+    search(word, Object.assign(opt, cmd))
   })
+
 
 program.parse(process.argv)

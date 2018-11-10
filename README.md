@@ -11,11 +11,11 @@
 - [ ] command
   - [ ] show example sentences
   - [ ] global install
-  - [ ] simplify the command instead of using node commands.
+  - [x] simplify the command instead of using node commands.
 - [ ] language detect
 - [ ] error handlering
 - [ ] theme support
-- [ ] add loading animation
+- [x] add loading animation
 
 
 ### command

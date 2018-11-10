@@ -1,6 +1,9 @@
 const Crawler = require('crawler')
-const { painting } = require('./painter')
 const { spinner } = require('./spinner')
+
+const c = new Crawler({
+  maxConnections: 1,
+})
 
 class Word {
   constructor(word, symbol, translation, changes) {
@@ -11,11 +14,8 @@ class Word {
   }
 }
 
-const search = (word, opt) => {
+const query = (word, cb) => {
   spinner.create()
-  const c = new Crawler({
-    maxConnections: 1,
-  })
 
   c.queue([{
     uri: `http://www.iciba.com/${word}`,
@@ -31,7 +31,7 @@ const search = (word, opt) => {
         console.log(error)
       } else {
         const $ = res.$
-  
+
         const symbols = []
         $('.base-speak span span').each(function() {
           const val = $(this).text()
@@ -54,7 +54,7 @@ const search = (word, opt) => {
         })
   
         spinner.success('Results are below:')
-        painting(new Word(word, symbols, translations, changes))
+        cb(new Word(word, symbols, translations, changes))
       }
       done()
     }
@@ -62,5 +62,5 @@ const search = (word, opt) => {
 }
 
 module.exports = {
-  search,
+  query,
 }
