@@ -1,5 +1,6 @@
 const Crawler = require('crawler')
 const { painting } = require('./painter')
+const { spinner } = require('./spinner')
 
 class Word {
   constructor(word, symbol, translation, changes) {
@@ -11,6 +12,7 @@ class Word {
 }
 
 const search = (word, opt) => {
+  spinner.create()
   const c = new Crawler({
     maxConnections: 1,
   })
@@ -51,6 +53,7 @@ const search = (word, opt) => {
           changes.push([$(this).text()])
         })
   
+        spinner.success('Results are below:')
         painting(new Word(word, symbols, translations, changes))
       }
       done()
