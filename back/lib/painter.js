@@ -1,8 +1,14 @@
 const chalk = require('chalk')
 const log = console.log
 
+const combineInLine = (arr) => {
+  if (arr.length < 1) return ''
+  if (arr.length === 2) return arr[0]
+  return arr.reduce((str, el) => str += '  ' + el, '')
+}
+
 const paintSymbol = (symbol) => {
-  log(chalk.cyan(symbol.reduce((str, el) => str += '  ' + el), ''))
+  log(chalk.cyan(combineInLine(symbol)))
 }
 
 /**

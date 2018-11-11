@@ -16,7 +16,6 @@ program
   .alias('q')
   .description('Query <word>')
   .option('-f, --fuzzy', 'With fuzzy matching')
-  .option('-e, --example', 'With examples')
   .action((word, cmd) => {
     search(word, Object.assign(opt, cmd))
   })
