@@ -1,5 +1,7 @@
 const chalk = require('chalk')
 const log = console.log
+const { readTheme } = require('./config')
+const theme = readTheme().data
 
 const combineInLine = (arr) => {
   if (arr.length < 1) return ''
@@ -8,7 +10,7 @@ const combineInLine = (arr) => {
 }
 
 const paintSymbol = (symbol) => {
-  log(chalk.cyan(combineInLine(symbol)))
+  log(chalk.hex(theme.symbol)(combineInLine(symbol)))
 }
 
 /**
@@ -16,11 +18,11 @@ const paintSymbol = (symbol) => {
  * e.g. ['n', 'cool,good']
  */
 const paintTranslation = (translation) => {
-  log(`${chalk.magenta(translation[0])}: ${chalk.blue(translation[1])}`)
+  log(`${chalk.hex(theme.propTitle)(translation[0])}: ${chalk.hex(theme.prop)(translation[1])}`)
 }
 
 const paintChange = (change) => {
-  log(`${chalk.yellow(change)}`)
+  log(`${chalk.hex(theme.changes)(change)}`)
 }
 
 const warning = (word) => log(chalk.keyword(word))
