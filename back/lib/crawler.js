@@ -16,7 +16,7 @@ class Word {
   }
 }
 
-const query = (word, cb) => {
+const query = (word, opts, cb) => {
   spinner.create()
   const target = returnProperCode(word)
 

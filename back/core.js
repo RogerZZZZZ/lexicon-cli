@@ -16,12 +16,12 @@ const search = (word, opt) => {
       inquirer
         .prompt(question)
         .then(answer => {
-          query(answer.word, painting)
+          query(answer.word, opt, painting)
         })
       return;
     }
   }
-  query(word, painting)
+  query(word, opt, painting)
 }
 
 module.exports = {

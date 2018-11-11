@@ -1,7 +1,9 @@
 const chalk = require('chalk')
 const log = console.log
 
-const paintSymbol = (symbol) => log(chalk.cyan(symbol))
+const paintSymbol = (symbol) => {
+  log(chalk.cyan(symbol.reduce((str, el) => str += '  ' + el), ''))
+}
 
 /**
  * @param {*} translations 
@@ -18,7 +20,7 @@ const paintChange = (change) => {
 const warning = (word) => log(chalk.keyword(word))
 
 const painting = (word, opt) => {
-  word.symbol.map(el => paintSymbol(el))
+  paintSymbol(word.symbol)
   word.translation.map(el => paintTranslation(el))
   word.changes.map(el => paintChange(el))
 }
