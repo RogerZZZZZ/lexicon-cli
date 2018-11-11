@@ -12,8 +12,9 @@
   - [x] simplify the command instead of using node commands.
 - [x] language detect
 - [x] error handlering
-- [ ] theme support
+- [x] theme support
 - [x] add loading animation
+- [ ] support add new theme
 
 
 ### command

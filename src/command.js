@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const { search } = require('../back/core')
+const { search, theme } = require('../back/core')
 
 const opt = {
   fuzzy: false,
@@ -19,6 +19,12 @@ program
   .action((word, cmd) => {
     search(word, Object.assign(opt, cmd))
   })
+
+program
+  .command('theme')
+  .alias('t')
+  .description('Choose another theme!')
+  .action(() => theme())
 
 program
   .on('command:*', () => {
