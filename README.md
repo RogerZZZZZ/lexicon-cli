@@ -22,5 +22,9 @@
 ```shell
 cd src/
 
+// query
 node command.js q pig
+
+// change theme
+node command.js t
 ```

@@ -4,7 +4,7 @@ const program = require('commander')
 const { search, theme } = require('../back/core')
 
 const opt = {
-  fuzzy: false,
+  fuzzy: true,
 }
 
 program
@@ -15,7 +15,7 @@ program
   .command('query <word>')
   .alias('q')
   .description('Query <word>')
-  .option('-f, --fuzzy', 'With fuzzy matching')
+  // .option('-f, --fuzzy', 'With fuzzy matching')
   .action((word, cmd) => {
     search(word, Object.assign(opt, cmd))
   })
