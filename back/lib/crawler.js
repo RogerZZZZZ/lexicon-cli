@@ -1,5 +1,7 @@
 const Crawler = require('crawler')
 const { spinner } = require('./spinner')
+const { returnProperCode } = require('./detect')
+const { isEmpty } = require('./helper')
 
 const c = new Crawler({
   maxConnections: 1,
@@ -16,9 +18,10 @@ class Word {
 
 const query = (word, cb) => {
   spinner.create()
+  const target = returnProperCode(word)
 
   c.queue([{
-    uri: `http://www.iciba.com/${word}`,
+    uri: `http://www.iciba.com/${target}`,
     jQuery: {
       name: 'cheerio',
       options: {
@@ -29,6 +32,7 @@ const query = (word, cb) => {
     callback: function(error, res, done) {
       if (error) {
         console.log(error)
+        spinner.fail(`Catch error: : ${error}`)
       } else {
         const $ = res.$
 
@@ -52,9 +56,13 @@ const query = (word, cb) => {
         $('.change.clearfix span').each(function() {
           changes.push([$(this).text()])
         })
-  
-        spinner.success('Results are below:')
-        cb(new Word(word, symbols, translations, changes))
+
+        if (isEmpty(symbols) && isEmpty(translations) && isEmpty(changes)) {
+          spinner.warn(`Fail to find this word: ${word}`)
+        } else {
+          spinner.success('Results are below:')
+          cb(new Word(word, symbols, translations, changes))
+        }
       }
       done()
     }

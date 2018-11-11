@@ -2,18 +2,17 @@
 
 
 ### TODO
-- [ ] spell check
-  - [ ] can support choose word
-  - [ ] use inquirer
-  - [ ] load Typo previously to speed up
+- [x] spell check
+  - [x] can support choose word
+  - [x] use inquirer
 - [ ] layout now is ugly
 - [x] support simple query
 - [ ] command
   - [ ] show example sentences
   - [ ] global install
   - [x] simplify the command instead of using node commands.
-- [ ] language detect
-- [ ] error handlering
+- [x] language detect
+- [x] error handlering
 - [ ] theme support
 - [x] add loading animation
 

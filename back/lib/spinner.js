@@ -27,6 +27,10 @@ class Spinner {
   info(text) {
     this.spinner.info(text)
   }
+
+  fail(test) {
+    this.spinner.fail(text)
+  }
 }
 
 const spinner = new Spinner()
