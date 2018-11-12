@@ -1,9 +1,9 @@
-# dictionary-cli
+# dictionary-cli-simple
 
 ### install
 
 ```shell
-$ npm install -g dict-cli
+$ npm install -g dict-cli-simple
 ```
 
 ### command

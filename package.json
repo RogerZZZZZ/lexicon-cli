@@ -1,9 +1,9 @@
 {
-  "name": "dict-cli",
-  "version": "1.0.0",
+  "name": "dict-cli-simple",
+  "version": "1.0.2",
   "description": "One simple dictionary CLI",
   "main": "./build/index.js",
-  "homepage": "https://github.com/RogerZZZZZ/data-converter",
+  "homepage": "https://github.com/RogerZZZZZ/dictionary-cli-simple",
   "scripts": {
     "build": "webpack --config script/prod.config.js --progress --profile --colors --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
