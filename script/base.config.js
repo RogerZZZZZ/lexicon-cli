@@ -12,7 +12,7 @@ const config = {
   },
   externals: [nodeExternals()],
   entry: {
-    index: path.join(__dirname, '../src/command')
+    index: path.join(__dirname, '../command')
   },
   output: {
     path: path.join(__dirname, '../build/'),
@@ -27,9 +27,12 @@ const config = {
   module: {
     rules: [{
       test: /\.js$/,
-      loader: 'babel-loader',
+      use: ['babel-loader', 'shebang'],
       exclude: path.resolve(__dirname, '../node_modules/'),
       include: root,
+    }, {
+      test: /\.js$/,
+      loader: 'shebang-loader'
     }],
   },
   plugins: [

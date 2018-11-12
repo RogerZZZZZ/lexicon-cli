@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 const program = require('commander')
-const { search, theme } = require('../back/core')
+const { search, theme } = require('./back/core')
 
 const opt = {
   fuzzy: true,
