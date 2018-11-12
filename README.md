@@ -28,8 +28,8 @@ $ dict --help
   - [x] use inquirer
 - [x] layout now is ugly
 - [x] support simple query
-- [ ] command
-  - [ ] global install
+- [x] command
+  - [x] global install
   - [x] simplify the command instead of using node commands.
 - [x] language detect
 - [x] error handlering
