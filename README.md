@@ -1,5 +1,23 @@
 # dictionary-cli
 
+### install
+
+```shell
+$ npm install -g dict-cli
+```
+
+### command
+
+```shell
+// query
+$ dict q pig
+
+// change theme
+$ dict t
+
+//help
+$ dict --help
+```
 
 ### TODO
 - [x] spell check
@@ -15,16 +33,4 @@
 - [x] theme support
 - [x] add loading animation
 - [ ] support add new theme
-
-
-### command
-
-```shell
-cd src/
-
-// query
-node command.js q pig
-
-// change theme
-node command.js t
-```
+- [x] build

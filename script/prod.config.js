@@ -3,20 +3,12 @@ const webpackMerge = require('webpack-merge')
 const baseConfig = require('./base.config')
 
 const baseProdConfig = webpackMerge(baseConfig, {
+  optimization: {
+    minimize: false
+  },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.IgnorePlugin(/[^/]+\/[\S]+.dev$/),
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false,
-      compressor: {
-        warnings: false,
-      }
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    })
   ]
 })
 

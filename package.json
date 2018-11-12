@@ -1,22 +1,24 @@
 {
-  "name": "dict",
+  "name": "dict-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "One simple dictionary CLI",
+  "main": "./build/index.js",
+  "homepage": "https://github.com/RogerZZZZZ/data-converter",
   "scripts": {
-    "dev": "webpack --config build/base.config.js --watch",
-    "build": "webpack --config build/prod.config.js --progress --profile --colors",
+    "build": "webpack --config script/prod.config.js --progress --profile --colors --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "RogerZZZZZ (https://github.com/RogerZZZZZ)",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.3.15",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.0",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-espower": "^3.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.2.0",
     "babel-plugin-transform-runtime": "^6.5.2",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babel-runtime": "^6.3.19",
@@ -24,8 +26,11 @@
     "eslint-config-airbnb": "^12.0.0",
     "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-import": "^1.16.0",
+    "shebang-loader": "0.0.1",
     "webpack": "^4.24.0",
-    "webpack-merge": "^4.1.4"
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -36,6 +41,20 @@
     "ora": "^3.0.0",
     "typo-js": "^1.0.3"
   },
+  "files": [
+    "build/*",
+    "assets/*",
+    "back/*",
+    "src/*",
+    "*.js",
+    "*.json",
+    "README.md"
+  ],
+  "keywords": [
+    "dictionary",
+    "dict",
+    "cli"
+  ],
   "preferGlobal": true,
-  "bin": "./src/command.js"
+  "bin": "./build/index.js"
 }
