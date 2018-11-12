@@ -1,9 +1,9 @@
-# dictionary-cli-simple
+# lexicon-cli
 
 ### install
 
 ```shell
-$ npm install -g dict-cli-simple
+$ npm install -g lexicon-cli
 ```
 
 ### command
