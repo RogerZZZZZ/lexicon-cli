@@ -30,9 +30,6 @@ const config = {
       loader: 'babel-loader',
       exclude: path.resolve(__dirname, '../node_modules/'),
       include: root,
-    }, {
-      test: /\.js$/,
-      loader: 'shebang-loader'
     }],
   },
   plugins: [
