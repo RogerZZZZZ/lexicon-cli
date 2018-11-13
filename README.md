@@ -1,4 +1,7 @@
-# lexicon-cli
+<div align="center">
+  <h1 style="border:0">Lexicon CLI Tool</h1>
+  📌 One tool for quick querying word in English and Chinese 
+</div>
 
 ### install
 
@@ -8,31 +11,23 @@ $ npm install -g lexicon-cli
 
 ### command
 
+##### Query for a word
+
 ```shell
 $ dict pig
 $ lexi pig
-
-// change theme
-$ dict -t
-// or lexi -t
-
-//help
-$ dict --help
-// or lexi --help
 ```
 
-### TODO
-- [x] spell check
-  - [x] can support choose word
-  - [x] use inquirer
-- [x] layout now is ugly
-- [x] support simple query
-- [x] command
-  - [x] global install
-  - [x] simplify the command instead of using node commands.
-- [x] language detect
-- [x] error handlering
-- [x] theme support
-- [x] add loading animation
-- [ ] support add new theme
-- [x] build
+##### Change the theme
+
+```shell
+$ dict -t
+$ lexi -t
+```
+
+##### Help
+
+```shell
+$ dict --help
+$ lexi --help
+```

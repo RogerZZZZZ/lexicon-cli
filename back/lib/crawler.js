@@ -1,6 +1,5 @@
 const Crawler = require('crawler')
 const { spinner } = require('./spinner')
-const { returnProperCode } = require('./detect')
 const { isEmpty } = require('./helper')
 
 const c = new Crawler({
@@ -18,10 +17,9 @@ class Word {
 
 const query = (word, opts, cb) => {
   spinner.create()
-  const target = returnProperCode(word)
 
   c.queue([{
-    uri: `http://www.iciba.com/${target}`,
+    uri: `http://www.iciba.com/${word}`,
     jQuery: {
       name: 'cheerio',
       options: {

@@ -3,9 +3,8 @@
 const program = require('commander')
 const { search, theme } = require('./back/core')
 
-const opt = {
-  fuzzy: true,
-}
+// default config
+const defultConfig = {}
 
 program
   .version('0.0.1')
@@ -15,5 +14,5 @@ program
 if (program.theme) {
   theme()
 } else {
-  search(program.args.join(' '), opt)
+  search(program.args.join(' '), defultConfig)
 }

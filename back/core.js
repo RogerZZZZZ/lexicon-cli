@@ -2,10 +2,13 @@ const inquirer = require('inquirer')
 const { query } = require('./lib/crawler')
 const { painting } = require('./lib/painter')
 const { suggest } = require('./lib/typo')
+const { detectIfChinese, returnProperCode } = require('./lib/detect')
 const { themeList, changeTheme } = require('./lib/config')
 
 const search = (word, opt) => {
-  if (opt.fuzzy) {
+  if (detectIfChinese(word)) {
+    word = returnProperCode(word)
+  } else {
     let suggestions = suggest(word)
     if (suggestions.length >= 1) {
       const question = {
