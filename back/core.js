@@ -4,6 +4,8 @@ const { painting } = require('./lib/painter')
 const { suggest } = require('./lib/typo')
 const { detectIfChinese, returnProperCode } = require('./lib/detect')
 const { themeList, changeTheme } = require('./lib/config')
+const { addThemeQ } = require('./questions/addTheme')
+const { writeFile } = require('./lib/theme')
 
 const search = (word, opt) => {
   if (detectIfChinese(word)) {
@@ -19,9 +21,7 @@ const search = (word, opt) => {
       }
       inquirer
         .prompt(question)
-        .then(answer => {
-          query(answer.word, opt, painting)
-        })
+        .then(answer => query(answer.word, opt, painting))
       return;
     }
   }
@@ -41,7 +41,14 @@ const theme = () => {
     .then(answer => changeTheme(answer.theme))
 }
 
+const addTheme = () => {
+  inquirer
+    .prompt(addThemeQ)
+    .then(answer => writeFile(answer))
+}
+
 module.exports = {
   search,
   theme,
+  addTheme,
 }

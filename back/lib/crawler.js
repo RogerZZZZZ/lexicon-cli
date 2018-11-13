@@ -7,11 +7,11 @@ const c = new Crawler({
 })
 
 class Word {
-  constructor(word, symbol, translation, changes) {
+  constructor(word, symbol, translation, related) {
     this.word = word
     this.symbol = symbol
     this.translation = translation
-    this.changes = changes
+    this.related = related
   }
 }
 
@@ -50,16 +50,16 @@ const query = (word, opts, cb) => {
           translations.push([prop, content])
         })
   
-        const changes = []
+        const related = []
         $('.change.clearfix span').each(function() {
-          changes.push([$(this).text()])
+          related.push([$(this).text()])
         })
 
-        if (isEmpty(symbols) && isEmpty(translations) && isEmpty(changes)) {
+        if (isEmpty(symbols) && isEmpty(translations) && isEmpty(related)) {
           spinner.warn(`Fail to find this word: ${word}`)
         } else {
           spinner.success('Results are below:')
-          cb(new Word(word, symbols, translations, changes))
+          cb(new Word(word, symbols, translations, related))
         }
       }
       done()

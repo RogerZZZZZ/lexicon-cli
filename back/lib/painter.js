@@ -18,11 +18,11 @@ const paintSymbol = (symbol) => {
  * e.g. ['n', 'cool,good']
  */
 const paintTranslation = (translation) => {
-  log(`${chalk.hex(theme.propTitle)(translation[0])}: ${chalk.hex(theme.prop)(translation[1])}`)
+  log(`${chalk.hex(theme.wordClasses)(translation[0])}: ${chalk.hex(theme.content)(translation[1])}`)
 }
 
-const paintChange = (change) => {
-  log(`${chalk.hex(theme.changes)(change)}`)
+const paintRelated = (related) => {
+  log(`${chalk.hex(theme.related)(related)}`)
 }
 
 const warning = (word) => log(chalk.keyword(word))
@@ -30,7 +30,7 @@ const warning = (word) => log(chalk.keyword(word))
 const painting = (word, opt) => {
   paintSymbol(word.symbol)
   word.translation.map(el => paintTranslation(el))
-  word.changes.map(el => paintChange(el))
+  word.related.map(el => paintRelated(el))
 }
 
 module.exports = {

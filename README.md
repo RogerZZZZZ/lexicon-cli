@@ -13,17 +13,31 @@ $ npm install -g lexicon-cli
 
 ##### Query for a word
 
+![query](https://github.com/RogerZZZZZ/lexicon-cli/gif/query.gif)
+
 ```shell
 $ dict pig
 $ lexi pig
 ```
 
-##### Change the theme
+##### Theme
+
+![query](https://github.com/RogerZZZZZ/lexicon-cli/gif/theme.gif)
+
+> Add new theme
+
+```shell
+$ dict -a
+$ lexi -a
+```
+
+> Change the theme
 
 ```shell
 $ dict -t
 $ lexi -t
 ```
+
 
 ##### Help
 
