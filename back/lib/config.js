@@ -1,12 +1,12 @@
 const json = require('json-file')
-const file = json.read('./config.json')
+const file = json.read(`${__dirname}/config.json`)
 const fs = require('fs')
 
 const themeFolder = './assets/color/'
 
 const readTheme = () => {
   const { theme } = file.data
-  return json.read(`./assets/color/${theme}`)
+  return json.read(`${__dirname}/assets/color/${theme}`)
 }
 
 const changeTheme = (name) => {

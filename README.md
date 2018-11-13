@@ -9,13 +9,12 @@ $ npm install -g lexicon-cli
 ### command
 
 ```shell
-// query
-$ dict q pig
-// or lexi q pig
+$ dict pig
+$ lexi pig
 
 // change theme
-$ dict t
-// or lexi t
+$ dict -t
+// or lexi -t
 
 //help
 $ dict --help

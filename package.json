@@ -1,6 +1,6 @@
 {
   "name": "lexicon-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One simple dictionary CLI",
   "main": "build/index.js",
   "homepage": "https://github.com/RogerZZZZZ/lexicon-cli",
