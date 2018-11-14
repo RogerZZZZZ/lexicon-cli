@@ -7,7 +7,7 @@ const { search, theme, addTheme } = require('./back/core')
 const defultConfig = {}
 
 program
-  .version('1.1.1')
+  .version('1.1.2')
   .option('-t, --theme', 'Choose another theme!')
   .option('-a, --addTheme', 'Add theme you like!')
   .parse(process.argv)
