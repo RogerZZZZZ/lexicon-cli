@@ -16,13 +16,16 @@ $ npm install -g lexicon-cli
 ![query](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/query.gif)
 
 ```shell
-$ dict pig
-$ lexi pig
+$ dict dictionary
+$ lexi 词典
 ```
+![query](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/query.gif)
+
+##### Fuzzy Matching
+
+![fuzzy](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/fuzzy.gif)
 
 ##### Theme
-
-![theme](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/theme.gif)
 
 > Add new theme
 
@@ -37,6 +40,8 @@ $ lexi -a
 $ dict -t
 $ lexi -t
 ```
+
+![theme](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/theme.gif)
 
 
 ##### Help
