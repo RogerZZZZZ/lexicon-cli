@@ -13,8 +13,6 @@ $ npm install -g lexicon-cli
 
 ##### Query for a word(also support Chinese)
 
-![query](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/query.gif)
-
 ```shell
 $ dict dictionary
 $ lexi 词典
@@ -49,4 +47,14 @@ $ lexi -t
 ```shell
 $ dict --help
 $ lexi --help
+
+
+
+Usage: dict [options]
+
+Options:
+  -V, --version   output the version number
+  -t, --theme     Choose another theme!
+  -a, --addTheme  Add theme you like!
+  -h, --help      output usage information
 ```
