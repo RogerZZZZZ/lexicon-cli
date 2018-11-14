@@ -11,9 +11,9 @@ $ npm install -g lexicon-cli
 
 ### command
 
-##### Query for a word
+##### Query for a word(also support Chinese)
 
-![query](https://github.com/RogerZZZZZ/lexicon-cli/gif/query.gif)
+![query](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/query.gif)
 
 ```shell
 $ dict pig
@@ -22,7 +22,7 @@ $ lexi pig
 
 ##### Theme
 
-![query](https://github.com/RogerZZZZZ/lexicon-cli/gif/theme.gif)
+![theme](https://raw.githubusercontent.com/RogerZZZZZ/lexicon-cli/master/gif/theme.gif)
 
 > Add new theme
 
